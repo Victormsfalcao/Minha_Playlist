@@ -1,0 +1,344 @@
+:root {
+    /* ---------------- CORES GERAIS ---------------- */
+    --cor-fundo: #1B0A17;
+    /* roxo escuro quase preto */
+    --cor-texto: #F2E7F5;
+    /* rosa pálido, para textos principais */
+    --cor-texto-secundario: #D1BBDD;
+    /* rosa mais suave para textos secundários */
+
+    /* ---------------- GRADIENTE DA INTRO ---------------- */
+    --intro-gradiente-1: #F72585;
+    /* rosa vibrante */
+    --intro-gradiente-2: #7209B7;
+    /* roxo profundo */
+
+    /* ---------------- DESTAQUES E BOTÕES ---------------- */
+    --cor-destaque: #FF5DA2;
+    /* rosa neon para destaques e hover */
+    --botao-fundo: #F72585;
+    /* botão principal */
+    --botao-fundo-hover: #FF85C0;
+    /* botão hover, mais claro */
+    --botao-texto: #FFFFFF;
+    /* texto do botão */
+
+    /* ---------------- CARDS E ELEMENTOS ---------------- */
+    --card-fundo: #2A0D2E;
+    /* fundo dos cards, roxo escuro */
+    --card-borda: #FF5DA2;
+    /* borda rosa neon */
+    --card-texto: #F2E7F5;
+    /* texto dentro do card */
+
+    /* ---------------- SOMBRAS ---------------- */
+    --neon-rosa: rgba(247, 37, 133, 0.3);
+    --neon-roxo: rgba(114, 9, 183, 0.25);
+
+    /* ---------------- LINKS ---------------- */
+    --link-cor: #FF5DA2;
+    /* links normais */
+    --link-hover: #F72585;
+    /* links ao passar o mouse */
+
+    /* ---------------- ALERTAS / BADGES ---------------- */
+    --alerta-fundo: #FF85C0;
+    /* alertas ou badges */
+    --alerta-texto: #1B0A17;
+    /* contraste escuro para texto */
+}
+
+
+/* ---------------- RESET ---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    background-color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* CENTRALIZA TUDO */
+    gap: 60px;
+    /* Espaço entre partes */
+    height: 120px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--neon-roxo);
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-branco);
+}
+
+/* ---------------- INTRO ---------------- */
+
+.intro {
+    background: radial-gradient(circle, var(--intro-gradiente-1) 0%, var(--intro-gradiente-2) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    gap: 60px;
+}
+
+.intro-title {
+    font-family: "Space Grotesk", Arial;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--cor-branco);
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.highlight {
+    color: var(--cor-destaque);
+}
+
+.intro-subtitle {
+    font-family: "Roboto", Arial;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+}
+
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(255, 93, 24, 0.2);
+}
+
+/* ---------------- DEPOIMENTOS ---------------- */
+
+.depoimentos {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 26, 26, 0.9) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.depoimento-card {
+    background: var(--card-fundo);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--card-borda);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.depoimento-text {
+    color: var(--card-texto);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* ---------------- ESTATÍSTICAS ---------------- */
+
+.estatisticas {
+    background: var(--cor-fundo);
+    padding: 80px 0;
+    margin: 40px 0;
+}
+
+.estatisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.estat-card {
+    background: var(--estat-fundo);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--estat-texto);
+    transition: transform 0.3s ease;
+}
+
+.estat-card:hover {
+    transform: translateY(-5px);
+}
+
+.estat-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.estat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.estat-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ---------------- ACCORDION (TEMA BMTH) ---------------- */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.accordion {
+    background-color: var(--bmth-card);
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--neon-roxo);
+    transition: box-shadow .3s ease;
+}
+
+.accordion:hover {
+    box-shadow: 0 0 18px var(--neon-rosa);
+}
+
+.accordion-header {
+    color: var(--bmth-rosa);
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.accordion-header span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-body {
+    color: var(--bmth-cinza);
+    font-size: 14px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .3s, height .3s;
+}
+
+.accordion-body.active {
+    height: 100%;
+    opacity: 1;
+    padding: 8px 0px;
+}
+
+.arrow {
+    transition: transform .2s linear;
+    filter: drop-shadow(0 0 3px var(--bmth-roxo));
+}
+
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+    filter: drop-shadow(0 0 6px var(--bmth-rosa));
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .intro-title {
+        font-size: 2.5rem;
+    }
+
+    .depoimentos-grid,
+    .estatisticas-grid {
+        grid-template-columns: 1fr;
+    }
+}
