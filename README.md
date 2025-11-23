@@ -169,11 +169,6 @@ Projeto_Final_Senai/
   - `user.gettopalbums` - Top álbuns do usuário
   - `user.gettoptracks` - Top músicas do usuário
 
-### Lyrics.ovh API
-- **Endpoint**: `https://api.lyrics.ovh/v1/`
-- **Uso**: Busca de letras de músicas
-- **Formato**: `/{artista}/{musica}`
-
 ## 📜 Scripts Disponíveis
 
 | Script | Descrição |
@@ -196,11 +191,6 @@ Componente reutilizável que renderiza:
 - Premiações
 - Estatísticas do Last.fm
 - Lista de músicas com letras
-
-### Accordion.vue
-Componente de acordeão para exibir letras de músicas com carregamento sob demanda.
-
-## 🔧 Composables
 
 ### useArtistStats.js
 Gerencia o estado e busca de estatísticas do Last.fm:
@@ -260,5 +250,5 @@ As APIs utilizadas (Last.fm e Lyrics.ovh) devem permitir requisições do navega
 
 ---
 
-**Desenvolvido como projeto final do curso Senai**
+**Desenvolvido como projeto final do curso de Front-End do Senai**
 
